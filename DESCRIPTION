@@ -1,0 +1,10 @@
+Package: hbadata
+Title: Human Brain Atlas Expression Data
+Version: 0.0.0.9000
+Authors@R: c( person("Charles", "Edelson", email = "charlese@alleninstitute.org", role = c("aut", "cre")), person("Jeremy", "Miller", email = "jeremym@alleninstitute.org", role = c("aut")))
+Description: A data package containing mRNA microarray expression values for the Human Brain Atlas, from the Allen Institute.
+Depends: R (>= 3.4.0)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
