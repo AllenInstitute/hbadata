@@ -2,7 +2,7 @@
 #'
 #'A dataset containing the normalized expression values for the human brain atlas.
 #'
-#'@format A data frame with 64795968 rows and 5 variables:
+#'@format A data frame with 32160624 rows and 5 variables:
 #'\describe{
 #'  \item{donorID}{brain ID from the Allen Institute}
 #'  \item{probe_name}{mRNA probe used for this observation}
