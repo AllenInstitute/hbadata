@@ -2,7 +2,31 @@
 #----------------------------FUNCTION DEFINITIONS------------------------------#
 #------------------------------------------------------------------------------#
 
-#' Function for Creating HBA dataframe object
+#' Tidy the human brain atlas data. The data is available for download here:
+#' http://human.brain-map.org/static/download. The data comes as 6 zip files,
+#' one for each donor. To use this script, but all 6 directories in a base
+#' directory like such
+#' 
+#' dirHBA
+#'      |_ Donor1
+#'      |_ Donor2
+#'      |_ ...
+#' 
+#' The `path` is then the path to dirHBA.
+#' 
+#' 
+#' 
+#' @param path File path to the base directory as depicted above
+#' @param func Aggregating function for brain structures; `max` default
+#' @param Boolean for rowcollapsing via WGCNA's collapseRows; `TRUE` default
+#' @return Create a new directory in the current working directory `resultFrame` or `resultFrameCollapse`. This directoy contains the tidy version of each donors brain
+#' @examples
+#' dirHBA <- "/my/very/cool/file/system/dirHBA"
+#' # aggregate to max and don't collapse
+#' formatterHBA(dirHBA)
+#' 
+#' # aggregate to min and collapse rows
+#' formatterHBA(dirHBA, func=min, collapse=TRUE) 
 formatterHBA <- function(path, func=max, collapse = FALSE){
     
     # create a list of files to iterate through
@@ -27,6 +51,7 @@ formatterHBA <- function(path, func=max, collapse = FALSE){
     }
 }
 
+#------------------------------HELPER FUNCTIONS--------------------------------#
 
 .createHBAMatrix <- function(mpath, ppath, apath){
 
@@ -157,12 +182,23 @@ formatterHBA <- function(path, func=max, collapse = FALSE){
 #---------------------------------MAIN SCRIPT----------------------------------#
 #------------------------------------------------------------------------------#
 
-# folder <- "C:/Users/cygwin/home/charlese/dir_HBA/normalized_microarray_donor10021"
+# This script is meant to reformat the data found on the allen institutes human
+# brain atlas form into tidy (http://vita.had.co.nz/papers/tidy-data.html) data.
+# It accomplishes this goal by individually transfering each brain from wide to
+# long format and then aggregating on structures to create ID - observation 
+# pairs. From there the data is collapsed using the WGCNA collapseRows function,
+# and is then saved as a csv (disk space is cheap...). The second half of this 
+# scipt then loads these csvs (after exiting the initial function) and rbinds
+# them together before saving as one large tidy dataframe.
+
+# reset dirHBA to point to base directory
 dirHBA <- "C:/Users/charlese/Desktop/Data_Exploration/dir_HBA"
 datHBA_test <- formatterHBA(dirHBA, collapse = TRUE)
 
 
-# load to create level for factor import
+
+# load to create level for factor import 
+# these are created in `create_factors.py`
 load("C:/Users/cygwin/home/charlese/hbadata/data/donorsHBA.rda")
 load("C:/Users/cygwin/home/charlese/hbadata/data/probesHBA.rda")
 load("C:/Users/cygwin/home/charlese/hbadata/data/genesHBA.rda")
