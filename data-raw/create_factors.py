@@ -110,11 +110,11 @@ def write_subregions(path):
 
     write_list(struct_id, "factorsHBA/structure_IDs.txt")
     write_list(struct_acro, "factorsHBA/structure_acronyms.txt")
-        
+
 
 if __name__ == "__main__":
 
-    dirHBA = "/Users/edelsonc/Desktop/Data_Science/Allen_Brain_Institute/Allen_Internship/dirHBA"
+    dirHBA = "C:/Users/charlese/Desktop/Data_Exploration/dir_HBA"
     
     create_output_directory()
     write_donors(dirHBA)

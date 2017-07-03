@@ -8,7 +8,7 @@ This package is intended to be used in conjuntion with the `atlasplot` package.
 ## Install
 The install the `hbadata` package it is recommended to use the [`devtools`](https://github.com/hadley/devtools) package. This is a well trusted and reputable package from Hadley Wickham intended to streamline package development and installation. This alternate installation method is necessary due to the large size of this package.
 
-**WARNING**: This package is large (>80 Mb) ensure that you have a steady internet connection.
+**WARNING**: This package is large (>80 Mb); ensure that you have a steady internet connection.
 
 In the `R` command line perform the following commands
 ```
