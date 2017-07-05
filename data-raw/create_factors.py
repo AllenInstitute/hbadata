@@ -52,7 +52,7 @@ def write_donors(path):
     """
     donors = []
     for dirc in os.listdir(path): # get donorID from dir name
-        donor = dirc[27:]
+        donor = "donor{}".format(dirc[27:])
         donors.append(donor)
 
     # write result to list in new directory of factors
@@ -82,8 +82,8 @@ def write_probes_genes(path):
                     genes.add(row[3])
 
     # write results to factor 
-    write_list(probes, "factorsHBA/genes.txt")
-    write_list(genes, "factorsHBA/probes.txt")
+    write_list(probes, "factorsHBA/probes.txt")
+    write_list(genes, "factorsHBA/genes.txt")
 
 
 def write_subregions(path):
