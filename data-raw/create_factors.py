@@ -30,7 +30,7 @@ def write_list(alist, path):
 
 def create_output_directory():
     """
-    Function creates the directory to place the output functions in. It will
+    Function creates the directory to place the output files in. It will
     be in the directory the script is run in.
     """
     print("Creating factorsHBA in {}".format(os.getcwd()))

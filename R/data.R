@@ -1,17 +1,86 @@
 #'Micro RNA Expression Values for the Human Brain Atlas.
 #'
-#'A dataset containing the normalized expression values for the human brain atlas.
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
 #'
-#'@format A data frame with 32160624 rows and 5 variables:
+#'@format A data frame with 26013983 rows and 4 variables:
 #'\describe{
 #'  \item{donorID}{brain ID from the Allen Institute}
-#'  \item{probe_name}{mRNA probe used for this observation}
 #'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
 #'  \item{brain_structure}{brain structure acronym}
 #'  \item{value}{normalized expression value}
 #'}
 #'@source \url{"http://human.brain-map.org/static/download"}
-"datHBA"
+"datHBA.donor1"
+
+#'Micro RNA Expression Values for the Human Brain Atlas.
+#'
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
+#'
+#'@format A data frame with 10574553 rows and 4 variables:
+#'\describe{
+#'  \item{donorID}{brain ID from the Allen Institute}
+#'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
+#'  \item{brain_structure}{brain structure acronym}
+#'  \item{value}{normalized expression value}
+#'}
+#'@source \url{"http://human.brain-map.org/static/download"}
+"datHBA.donor2"
+
+#'Micro RNA Expression Values for the Human Brain Atlas.
+#'
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
+#'
+#'@format A data frame with 15410299 rows and 4 variables:
+#'\describe{
+#'  \item{donorID}{brain ID from the Allen Institute}
+#'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
+#'  \item{brain_structure}{brain structure acronym}
+#'  \item{value}{normalized expression value}
+#'}
+#'@source \url{"http://human.brain-map.org/static/download"}
+"datHBA.donor3"
+
+#'Micro RNA Expression Values for the Human Brain Atlas.
+#'
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
+#'
+#'@format A data frame with 13691570 rows and 4 variables:
+#'\describe{
+#'  \item{donorID}{brain ID from the Allen Institute}
+#'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
+#'  \item{brain_structure}{brain structure acronym}
+#'  \item{value}{normalized expression value}
+#'}
+#'@source \url{"http://human.brain-map.org/static/download"}
+"datHBA.donor4"
+
+#'Micro RNA Expression Values for the Human Brain Atlas.
+#'
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
+#'
+#'@format A data frame with 14594631 rows and 4 variables:
+#'\describe{
+#'  \item{donorID}{brain ID from the Allen Institute}
+#'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
+#'  \item{brain_structure}{brain structure acronym}
+#'  \item{value}{normalized expression value}
+#'}
+#'@source \url{"http://human.brain-map.org/static/download"}
+"datHBA.donor5"
+
+#'Micro RNA Expression Values for the Human Brain Atlas.
+#'
+#'A dataset containing the normalized expression values for a single brain in the human brain atlas.
+#'
+#'@format A data frame with 27557926 rows and 4 variables:
+#'\describe{
+#'  \item{donorID}{brain ID from the Allen Institute}
+#'  \item{gene}{gene the above probe corresponds to; gene to probe is many to one}
+#'  \item{brain_structure}{brain structure acronym}
+#'  \item{value}{normalized expression value}
+#'}
+#'@source \url{"http://human.brain-map.org/static/download"}
+"datHBA.donor6" 
 
 #'Donor ID's for Brains in the Human Brain Atlas
 #'

@@ -4,7 +4,7 @@
 
 #' Tidy the human brain atlas data. The data is available for download here:
 #' http://human.brain-map.org/static/download. The data comes as 6 zip files,
-#' one for each donor. To use this script, but all 6 directories in a base
+#' one for each donor. To use this script, put all 6 directories in a base
 #' directory like such
 #' 
 #' dirHBA
@@ -113,16 +113,12 @@ formatterHBA <- function(path){
     # collapse rows -- this is a time intensive step
 
     # format for use in WGCNA collapseRow
-    # MicroExp$dat <- tidyr::spread(MicroLong, variable, value) # wide format
     MicroExp$group <- MicroExp$dat$gene
     MicroExp$id <- MicroExp$dat$probe_name
     MicroExp$struct <- colnames(MicroExp$dat)[c(-1,-2)]
     MicroExp$dat <- as.matrix(MicroExp$dat[c(-1,-2)])
     rownames(MicroExp$dat) <- MicroExp$id
 
-    # remove old objects to free memory
-    # rm(MicroLong)
-    # rm(structs)
     gc()  # this may make the machine return memory
 
     # collapse rows to get a single representative of each gene
@@ -165,12 +161,9 @@ formatterHBA <- function(path){
 
 # This script is meant to reformat the data found on the allen institutes human
 # brain atlas form into tidy (http://vita.had.co.nz/papers/tidy-data.html) data.
-# It accomplishes this goal by individually transfering each brain from wide to
-# long format and then aggregating on structures to create ID - observation 
-# pairs. From there the data is collapsed using the WGCNA collapseRows function,
-# and is then saved as a csv (disk space is cheap...). The second half of this 
-# scipt then loads these csvs (after exiting the initial function) and rbinds
-# them together before saving as one large tidy dataframe.
+# It accomplishes this goal by first collapsing data on gene using collapseRows
+# in the WGCNA package. Data is then transformed into long format so that each
+# row is an ID and an observation.
 
 # reset dirHBA to point to base directory
 dirHBA <- "C:/Users/charlese/Desktop/Data_Exploration/dir_HBA"
