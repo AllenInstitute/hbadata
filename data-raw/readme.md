@@ -10,10 +10,11 @@ this package. The content of this directory should be:
 ## Using the Scripts
 
 In order to use these scripts, you'll first need to download the raw 
-data from the [allen 
-instutue](http://human.brain-map.org/static/download). The data comes as 
+data from the [Allen 
+Institute](http://human.brain-map.org/static/download). The data comes 
+as 
 6 large zip file. Uncompress each of them and then place all 6 into a 
-base directory do the data is formated as:
+base directory:
 
 ```
 cwd
@@ -26,7 +27,8 @@ cwd
 All of these scripts can then be run in `cwd`
 
 ### `formatterHBA-0.0.4.r`
-This script is the heavy lifter of the 3. It create a new directory in 
+This script is the heavy lifter of the three. It creates a new directory 
+in 
 `cwd` and puts a reformatted version of the data from the `donor` files 
 into it. The function requires that you go and change the `dirHBA` 
 variable to run it. This is clearly annotated in the script. After 
@@ -75,8 +77,10 @@ cwd
 ```
 
 ### `create_factors.py`
-This script scapes through each `csv` in the original zip files and 
-create a new directory with the unique entries of donors, probes, genes, 
+This script scrapes through each `csv` in the original `donor` files 
+and 
+creates a new directory with the unique entries of donors, probes, 
+genes, 
 and structures.
 
 Use this script in the `cwd` by calling python
@@ -84,7 +88,7 @@ Use this script in the `cwd` by calling python
 $ python create_factors.py
 ```
 
-After running, you're cwd will look like
+After running, your cwd will look like
 ```
 cwd
    |_ resultFrameTotal.csv
