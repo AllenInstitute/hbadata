@@ -3,7 +3,7 @@ A repository to hold the `hbadata` package, a package containing the normalized 
 
 The original data can be found [here](http://human.brain-map.org/static/download).
 
-This package is intended to be used in conjuntion with the `atlasplot` package.
+This package is intended to be used in conjunction with the `atlasplot` package.
 
 ## Install
 To install the `hbadata` package it is recommended to use the 
