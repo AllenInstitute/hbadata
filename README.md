@@ -18,11 +18,11 @@ In the `R` command line perform the following commands
 install.package("devtools")
 
 # Install hbadata
-devtools::install_github("edelsonc/hbadata")
+devtools::install_github("AllenInstitute/hbadata")
 ```
 
 ## Licensing
-The license this source code is release under is TBD.
+The license this source code is released under is GPL v.2.
 
 ## Additional Details
 The source version of this package contains the code necessary to format the raw data downloaded from the [Allen Institute](http://human.brain-map.org/static/download) into the hosted `.rda` files. This code is located in `data-raw`. A `README.txt` is to follow.
